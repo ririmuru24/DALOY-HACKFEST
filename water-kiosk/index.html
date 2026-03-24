@@ -64,15 +64,16 @@
             <p class="sub-text">Ipasok ang iyong resiklong basura<br>sa scanner.</p>
         </div>
         <div class="white-card">
-            <p class="card-label">ANONG KLASE NG BASURA ITO?</p>
-            <input type="text" id="trash-input" autocomplete="off" placeholder="Halimbawa: Lata, Karton, Bote...">
+            <p class="card-label">ANONG KLASE NG BASURA ITO? <span style="color:#FF6B6B">*</span></p>
+            <input type="text" id="trash-input" autocomplete="off" placeholder="Halimbawa: Lata, Karton, Bote..." required>
+            <p id="trash-error" style="color:#FF6B6B;font-size:12px;font-weight:700;margin-top:6px;display:none;">⚠️ Pakipili o ilagay ang klase ng basura.</p>
             <div class="tag-row">
                 <div class="tag" onclick="app.selectTag('Plastic Bote')">🥤 Plastic Bote</div>
                 <div class="tag" onclick="app.selectTag('Lata')">🥫 Lata</div>
                 <div class="tag" onclick="app.selectTag('Karton')">📦 Karton</div>
                 <div class="tag" onclick="app.selectTag('Timba')">🗑️ Timba</div>
             </div>
-            <button class="primary-btn" onclick="app.startScanning()">SIMULAN ANG PAG-SCAN</button>
+            <button class="primary-btn" onclick="app.validateAndScan()">SIMULAN ANG PAG-SCAN</button>
         </div>
         <div class="dots-row"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
     </div>

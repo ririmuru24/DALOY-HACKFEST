@@ -1,225 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DALOY – Kiosk Locations</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="phone">
+  <div class="phone">
 
-  <!-- Status Bar -->
-  <div class="status-bar">
-    <span>9:41</span>
-    <div class="status-icons">
-      <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><rect x="0" y="3" width="3" height="9" rx="1"/><rect x="4.5" y="2" width="3" height="10" rx="1"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="2.5" height="12" rx="1" opacity=".3"/></svg>
-      <svg width="16" height="12" viewBox="0 0 24 12" fill="none" stroke="white" stroke-width="2"><path d="M1 1a20 10 0 0 1 22 0"/><path d="M5 5a12 6 0 0 1 14 0"/><path d="M9 9a6 3 0 0 1 6 0"/><circle cx="12" cy="11" r="1" fill="white"/></svg>
-      <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="3.5" stroke="white" stroke-opacity=".35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="white" opacity=".4"/></svg>
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-icons">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="white">
+          <rect x="0" y="3" width="3" height="9" rx="1" />
+          <rect x="4.5" y="2" width="3" height="10" rx="1" />
+          <rect x="9" y="0" width="3" height="12" rx="1" />
+          <rect x="13.5" y="0" width="2.5" height="12" rx="1" opacity=".3" />
+        </svg>
+        <svg width="16" height="12" viewBox="0 0 24 12" fill="none" stroke="white" stroke-width="2">
+          <path d="M1 1a20 10 0 0 1 22 0" />
+          <path d="M5 5a12 6 0 0 1 14 0" />
+          <path d="M9 9a6 3 0 0 1 6 0" />
+          <circle cx="12" cy="11" r="1" fill="white" />
+        </svg>
+        <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+          <rect x="0.5" y="0.5" width="22" height="11" rx="3.5" stroke="white" stroke-opacity=".35" />
+          <rect x="2" y="2" width="16" height="8" rx="2" fill="white" />
+          <path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="white" opacity=".4" />
+        </svg>
+      </div>
     </div>
+
+    <!-- Page Header -->
+    <div class="page-header fade-in">
+      <div class="page-header-group">
+        <h1>Kiosk Locations</h1>
+        <div class="sub" style="display:flex;align-items:center;gap:4px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+          Metro Manila, Philippines
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable Content -->
+    <div class="scroll-area">
+
+      <!-- Search -->
+      <div class="search-bar fade-in-2">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" placeholder="Search by location or name...">
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="filter-row fade-in-2">
+        <div class="filter-chip active">All</div>
+        <div class="filter-chip">Open Now</div>
+        <div class="filter-chip">Nearby</div>
+        <div class="filter-chip">High Water</div>
+      </div>
+
+      <!-- Mini Map -->
+      <div class="mini-map fade-in-2">
+        <div class="map-pin" style="top:22px;left:52px;">
+          <div class="map-pin-dot"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+        </div>
+        <div class="map-pin" style="top:55px;left:155px;">
+          <div class="map-pin-dot"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+        </div>
+        <div class="map-pin" style="top:85px;left:82px;">
+          <div class="map-pin-dot busy"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+        </div>
+        <div class="map-pin" style="top:30px;left:248px;">
+          <div class="map-pin-dot"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+        </div>
+        <div class="map-pin" style="top:100px;left:300px;">
+          <div class="map-pin-dot"><svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+        </div>
+        <div class="you-are-here">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+          You are here
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row fade-in-2">
+        <div class="stat-cell">
+          <div class="num">5</div>
+          <div class="lbl">Nearby</div>
+        </div>
+        <div class="stat-cell">
+          <div class="num accent">4</div>
+          <div class="lbl">Open Now</div>
+        </div>
+        <div class="stat-cell">
+          <div class="num green">4</div>
+          <div class="lbl">With Water</div>
+        </div>
+      </div>
+
+      <!-- Nearby Kiosks — Real NCR Philippines -->
+      <div class="section-label fade-in-3">Nearby Kiosks</div>
+      <div class="kiosk-list fade-in-3">
+
+        <!-- 1. Luneta Park -->
+        <div class="kiosk-card">
+          <div class="kiosk-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="kiosk-body">
+            <h4>Luneta Park Station</h4>
+            <p>Rizal Park, Padre Burgos Ave, Manila</p>
+            <div class="kiosk-meta">
+              <span class="kiosk-status open"><span class="dot"></span> Open</span>
+              <span class="kiosk-queue">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                Queue: 3
+              </span>
+              <span class="kiosk-rating">★ 4.8</span>
+            </div>
+          </div>
+          <span class="kiosk-dist">0.4 km</span>
+          <div class="kiosk-chevron"><svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </div>
+
+        <!-- 2. SM MOA -->
+        <div class="kiosk-card">
+          <div class="kiosk-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="kiosk-body">
+            <h4>SM Mall of Asia EcoHub</h4>
+            <p>J.W. Diokno Blvd, Mall of Asia, Pasay</p>
+            <div class="kiosk-meta">
+              <span class="kiosk-status open"><span class="dot"></span> Open</span>
+              <span class="kiosk-queue">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                Queue: 1
+              </span>
+              <span class="kiosk-rating">★ 4.7</span>
+            </div>
+          </div>
+          <span class="kiosk-dist">1.1 km</span>
+          <div class="kiosk-chevron"><svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </div>
+
+        <!-- 3. QC Memorial Circle — Busy -->
+        <div class="kiosk-card">
+          <div class="kiosk-icon busy-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="kiosk-body">
+            <h4>QC Memorial Circle Kiosk</h4>
+            <p>Elliptical Rd, Quezon City</p>
+            <div class="kiosk-meta">
+              <span class="kiosk-status busy"><span class="dot"></span> Busy</span>
+              <span class="kiosk-queue">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                Queue: 8
+              </span>
+              <span class="kiosk-rating">★ 4.5</span>
+            </div>
+          </div>
+          <span class="kiosk-dist" style="color:var(--text-2);">3.2 km</span>
+          <div class="kiosk-chevron"><svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </div>
+
+        <!-- 4. BGC Central -->
+        <div class="kiosk-card">
+          <div class="kiosk-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="kiosk-body">
+            <h4>BGC Central EcoPoint</h4>
+            <p>9th Ave &amp; 26th St, BGC, Taguig</p>
+            <div class="kiosk-meta">
+              <span class="kiosk-status open"><span class="dot"></span> Open</span>
+              <span class="kiosk-queue">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                Queue: 2
+              </span>
+              <span class="kiosk-rating">★ 4.9</span>
+            </div>
+          </div>
+          <span class="kiosk-dist">4.7 km</span>
+          <div class="kiosk-chevron"><svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </div>
+
+        <!-- 5. Ayala MRT Station -->
+        <div class="kiosk-card">
+          <div class="kiosk-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <div class="kiosk-body">
+            <h4>Ayala MRT Station Hub</h4>
+            <p>EDSA cor Ayala Ave, Makati City</p>
+            <div class="kiosk-meta">
+              <span class="kiosk-status open"><span class="dot"></span> Open</span>
+              <span class="kiosk-queue">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                Queue: 4
+              </span>
+              <span class="kiosk-rating">★ 4.6</span>
+            </div>
+          </div>
+          <span class="kiosk-dist">5.3 km</span>
+          <div class="kiosk-chevron"><svg viewBox="0 0 24 24">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </div>
+
+      </div>
+
+    </div><!-- /scroll-area -->
+
+    <!-- Bottom Nav -->
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-item">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="wallet.html" class="nav-item">
+        <svg viewBox="0 0 24 24">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+          <line x1="1" y1="10" x2="23" y2="10" />
+        </svg>
+        <span>Wallet</span>
+      </a>
+      <a href="locations.html" class="nav-item active">
+        <svg viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span>Locations</span>
+      </a>
+      <a href="profile.html" class="nav-item">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>Profile</span>
+      </a>
+    </nav>
+
   </div>
-
-  <!-- Page Header -->
-  <div class="page-header fade-in">
-    <div class="page-header-group">
-      <h1>Kiosk Locations</h1>
-      <div class="sub" style="display:flex;align-items:center;gap:4px;">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        Metro Manila, Philippines
-      </div>
-    </div>
-  </div>
-
-  <!-- Scrollable Content -->
-  <div class="scroll-area">
-
-    <!-- Search -->
-    <div class="search-bar fade-in-2">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" placeholder="Search by location or name...">
-    </div>
-
-    <!-- Filter Chips -->
-    <div class="filter-row fade-in-2">
-      <div class="filter-chip active">All</div>
-      <div class="filter-chip">Open Now</div>
-      <div class="filter-chip">Nearby</div>
-      <div class="filter-chip">High Water</div>
-    </div>
-
-    <!-- Mini Map -->
-    <div class="mini-map fade-in-2">
-      <div class="map-pin" style="top:22px;left:52px;">
-        <div class="map-pin-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      </div>
-      <div class="map-pin" style="top:55px;left:155px;">
-        <div class="map-pin-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      </div>
-      <div class="map-pin" style="top:85px;left:82px;">
-        <div class="map-pin-dot busy"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      </div>
-      <div class="map-pin" style="top:30px;left:248px;">
-        <div class="map-pin-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      </div>
-      <div class="map-pin" style="top:100px;left:300px;">
-        <div class="map-pin-dot"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      </div>
-      <div class="you-are-here">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        You are here
-      </div>
-    </div>
-
-    <!-- Stats -->
-    <div class="stats-row fade-in-2">
-      <div class="stat-cell">
-        <div class="num">5</div>
-        <div class="lbl">Nearby</div>
-      </div>
-      <div class="stat-cell">
-        <div class="num accent">4</div>
-        <div class="lbl">Open Now</div>
-      </div>
-      <div class="stat-cell">
-        <div class="num green">4</div>
-        <div class="lbl">With Water</div>
-      </div>
-    </div>
-
-    <!-- Nearby Kiosks — Real NCR Philippines -->
-    <div class="section-label fade-in-3">Nearby Kiosks</div>
-    <div class="kiosk-list fade-in-3">
-
-      <!-- 1. Luneta Park -->
-      <div class="kiosk-card">
-        <div class="kiosk-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="kiosk-body">
-          <h4>Luneta Park Station</h4>
-          <p>Rizal Park, Padre Burgos Ave, Manila</p>
-          <div class="kiosk-meta">
-            <span class="kiosk-status open"><span class="dot"></span> Open</span>
-            <span class="kiosk-queue">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Queue: 3
-            </span>
-            <span class="kiosk-rating">★ 4.8</span>
-          </div>
-        </div>
-        <span class="kiosk-dist">0.4 km</span>
-        <div class="kiosk-chevron"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </div>
-
-      <!-- 2. SM MOA -->
-      <div class="kiosk-card">
-        <div class="kiosk-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="kiosk-body">
-          <h4>SM Mall of Asia EcoHub</h4>
-          <p>J.W. Diokno Blvd, Mall of Asia, Pasay</p>
-          <div class="kiosk-meta">
-            <span class="kiosk-status open"><span class="dot"></span> Open</span>
-            <span class="kiosk-queue">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Queue: 1
-            </span>
-            <span class="kiosk-rating">★ 4.7</span>
-          </div>
-        </div>
-        <span class="kiosk-dist">1.1 km</span>
-        <div class="kiosk-chevron"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </div>
-
-      <!-- 3. QC Memorial Circle — Busy -->
-      <div class="kiosk-card">
-        <div class="kiosk-icon busy-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="kiosk-body">
-          <h4>QC Memorial Circle Kiosk</h4>
-          <p>Elliptical Rd, Quezon City</p>
-          <div class="kiosk-meta">
-            <span class="kiosk-status busy"><span class="dot"></span> Busy</span>
-            <span class="kiosk-queue">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Queue: 8
-            </span>
-            <span class="kiosk-rating">★ 4.5</span>
-          </div>
-        </div>
-        <span class="kiosk-dist" style="color:var(--text-2);">3.2 km</span>
-        <div class="kiosk-chevron"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </div>
-
-      <!-- 4. BGC Central -->
-      <div class="kiosk-card">
-        <div class="kiosk-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="kiosk-body">
-          <h4>BGC Central EcoPoint</h4>
-          <p>9th Ave &amp; 26th St, BGC, Taguig</p>
-          <div class="kiosk-meta">
-            <span class="kiosk-status open"><span class="dot"></span> Open</span>
-            <span class="kiosk-queue">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Queue: 2
-            </span>
-            <span class="kiosk-rating">★ 4.9</span>
-          </div>
-        </div>
-        <span class="kiosk-dist">4.7 km</span>
-        <div class="kiosk-chevron"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </div>
-
-      <!-- 5. Ayala MRT Station -->
-      <div class="kiosk-card">
-        <div class="kiosk-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="kiosk-body">
-          <h4>Ayala MRT Station Hub</h4>
-          <p>EDSA cor Ayala Ave, Makati City</p>
-          <div class="kiosk-meta">
-            <span class="kiosk-status open"><span class="dot"></span> Open</span>
-            <span class="kiosk-queue">
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Queue: 4
-            </span>
-            <span class="kiosk-rating">★ 4.6</span>
-          </div>
-        </div>
-        <span class="kiosk-dist">5.3 km</span>
-        <div class="kiosk-chevron"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </div>
-
-    </div>
-
-  </div><!-- /scroll-area -->
-
-  <!-- Bottom Nav -->
-  <nav class="nav-bar">
-    <a href="index.html" class="nav-item">
-      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span>Home</span>
-    </a>
-    <a href="wallet.html" class="nav-item">
-      <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-      <span>Wallet</span>
-    </a>
-    <a href="locations.html" class="nav-item active">
-      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span>Locations</span>
-    </a>
-    <a href="profile.html" class="nav-item">
-      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      <span>Profile</span>
-    </a>
-  </nav>
-
-</div>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>

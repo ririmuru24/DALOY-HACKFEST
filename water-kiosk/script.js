@@ -169,6 +169,31 @@ const app = {
         this.mode = 'get-water';
         this.totalMl = 1000;
         this.go('get-water');
+    },
+
+    /* ---- Validate recycle input before scanning ---- */
+    validateAndScan() {
+        const inp = document.getElementById('trash-input');
+        const err = document.getElementById('trash-error');
+        if (!inp || !inp.value.trim()) {
+            // Show error message
+            if (err) err.style.display = 'block';
+            // Flash red outline on the input
+            if (inp) {
+                inp.style.borderColor = '#FF6B6B';
+                inp.style.boxShadow   = '0 0 0 3px rgba(255,107,107,0.3)';
+                inp.focus();
+                setTimeout(() => {
+                    inp.style.borderColor = '';
+                    inp.style.boxShadow   = '';
+                }, 1800);
+            }
+            return;
+        }
+        // Valid — hide error and proceed
+        if (err) err.style.display = 'none';
+        if (inp) { inp.style.borderColor = ''; inp.style.boxShadow = ''; }
+        this.startScanning();
     }
 };
 

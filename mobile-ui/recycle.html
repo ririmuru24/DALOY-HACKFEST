@@ -1,76 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DALOY – Kiosk Detected Items</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="phone">
-  <div class="status-bar">
-    <span>9:41</span>
-    <div class="status-icons">
-      <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><rect x="0" y="3" width="3" height="9" rx="1"/><rect x="4.5" y="2" width="3" height="10" rx="1"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="2.5" height="12" rx="1" opacity=".3"/></svg>
-      <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="3.5" stroke="white" stroke-opacity=".35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="white" opacity=".4"/></svg>
+  <div class="phone">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="status-icons">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="white">
+          <rect x="0" y="3" width="3" height="9" rx="1" />
+          <rect x="4.5" y="2" width="3" height="10" rx="1" />
+          <rect x="9" y="0" width="3" height="12" rx="1" />
+          <rect x="13.5" y="0" width="2.5" height="12" rx="1" opacity=".3" />
+        </svg>
+        <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+          <rect x="0.5" y="0.5" width="22" height="11" rx="3.5" stroke="white" stroke-opacity=".35" />
+          <rect x="2" y="2" width="16" height="8" rx="2" fill="white" />
+          <path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="white" opacity=".4" />
+        </svg>
+      </div>
     </div>
+    <div class="page-header fade-in">
+      <div class="back-btn" onclick="history.back()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </div>
+      <div class="page-header-group">
+        <h1>Kiosk Detected Items</h1>
+      </div>
+    </div>
+    <div class="scroll-area">
+      <div class="points-hero fade-in-2">
+        <div class="points-hero-label">Points Earned</div>
+        <div class="points-hero-amount">+140 <span>credits</span></div>
+        <div class="points-hero-balance">New Balance: <strong>2,980 pts</strong></div>
+      </div>
+      <div class="detected-card fade-in-2">
+        <div class="section-label">Items Detected by Kiosk</div>
+        <div class="detected-row">
+          <div class="detected-left"><span class="detected-emoji">🥤</span> 3× Plastic Bottles</div>
+          <span class="detected-val">+90 pts</span>
+        </div>
+        <div class="detected-row">
+          <div class="detected-left"><span class="detected-emoji">🥫</span> 2× Aluminum Cans</div>
+          <span class="detected-val">+50 pts</span>
+        </div>
+        <div class="detected-total">
+          <span class="label">Total</span>
+          <span class="val">+140 pts</span>
+        </div>
+      </div>
+      <div class="section-label fade-in-3">What would you like to do?</div>
+      <div class="radio-list fade-in-3">
+        <div class="radio-option selected">
+          <div class="radio-icon"><svg viewBox="0 0 24 24">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+              <line x1="1" y1="10" x2="23" y2="10" />
+            </svg></div>
+          <div class="radio-body">
+            <h4>Keep My Credits</h4>
+            <p>Save for water or rewards later</p>
+          </div>
+          <div class="radio-dot"></div>
+        </div>
+        <div class="radio-option">
+          <div class="radio-icon"><svg viewBox="0 0 24 24">
+              <path d="M12 2.69l5.66 7.27a8.2 8.2 0 1 1-11.32 0z" />
+            </svg></div>
+          <div class="radio-body">
+            <h4>Get Water Now</h4>
+            <p>Dispense 1L from this kiosk</p>
+          </div>
+          <div class="radio-dot"></div>
+        </div>
+        <div class="radio-option">
+          <div class="radio-icon"><svg viewBox="0 0 24 24">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg></div>
+          <div class="radio-body">
+            <h4>Donate Water</h4>
+            <p>Give water to those in need</p>
+          </div>
+          <div class="radio-dot"></div>
+        </div>
+      </div>
+      <button class="btn-cta fade-in-3" onclick="location.href='wallet.html'">Save to Wallet</button>
+    </div>
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg><span>Home</span></a>
+      <a href="wallet.html" class="nav-item"><svg viewBox="0 0 24 24">
+          <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+          <line x1="1" y1="10" x2="23" y2="10" />
+        </svg><span>Wallet</span></a>
+      <a href="locations.html" class="nav-item"><svg viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg><span>Locations</span></a>
+      <a href="profile.html" class="nav-item"><svg viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg><span>Profile</span></a>
+    </nav>
   </div>
-  <div class="page-header fade-in">
-    <div class="back-btn" onclick="history.back()">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-    </div>
-    <div class="page-header-group">
-      <h1>Kiosk Detected Items</h1>
-    </div>
-  </div>
-  <div class="scroll-area">
-    <div class="points-hero fade-in-2">
-      <div class="points-hero-label">Points Earned</div>
-      <div class="points-hero-amount">+140 <span>credits</span></div>
-      <div class="points-hero-balance">New Balance: <strong>2,980 pts</strong></div>
-    </div>
-    <div class="detected-card fade-in-2">
-      <div class="section-label">Items Detected by Kiosk</div>
-      <div class="detected-row">
-        <div class="detected-left"><span class="detected-emoji">🥤</span> 3× Plastic Bottles</div>
-        <span class="detected-val">+90 pts</span>
-      </div>
-      <div class="detected-row">
-        <div class="detected-left"><span class="detected-emoji">🥫</span> 2× Aluminum Cans</div>
-        <span class="detected-val">+50 pts</span>
-      </div>
-      <div class="detected-total">
-        <span class="label">Total</span>
-        <span class="val">+140 pts</span>
-      </div>
-    </div>
-    <div class="section-label fade-in-3">What would you like to do?</div>
-    <div class="radio-list fade-in-3">
-      <div class="radio-option selected">
-        <div class="radio-icon"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-        <div class="radio-body"><h4>Keep My Credits</h4><p>Save for water or rewards later</p></div>
-        <div class="radio-dot"></div>
-      </div>
-      <div class="radio-option">
-        <div class="radio-icon"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 7.27a8.2 8.2 0 1 1-11.32 0z"/></svg></div>
-        <div class="radio-body"><h4>Get Water Now</h4><p>Dispense 1L from this kiosk</p></div>
-        <div class="radio-dot"></div>
-      </div>
-      <div class="radio-option">
-        <div class="radio-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <div class="radio-body"><h4>Donate Water</h4><p>Give water to those in need</p></div>
-        <div class="radio-dot"></div>
-      </div>
-    </div>
-    <button class="btn-cta fade-in-3" onclick="location.href='wallet.html'">Save to Wallet</button>
-  </div>
-  <nav class="nav-bar">
-    <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></a>
-    <a href="wallet.html" class="nav-item"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>Wallet</span></a>
-    <a href="locations.html" class="nav-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Locations</span></a>
-    <a href="profile.html" class="nav-item"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Profile</span></a>
-  </nav>
-</div>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
