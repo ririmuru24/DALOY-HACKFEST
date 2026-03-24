@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DALOY – Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <span>9:41</span>
+    <div class="status-icons">
+      <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><rect x="0" y="3" width="3" height="9" rx="1"/><rect x="4.5" y="2" width="3" height="10" rx="1"/><rect x="9" y="0" width="3" height="12" rx="1"/><rect x="13.5" y="0" width="2.5" height="12" rx="1" opacity=".3"/></svg>
+      <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="3.5" stroke="white" stroke-opacity=".35"/><rect x="2" y="2" width="16" height="8" rx="2" fill="white"/><path d="M23.5 4v4a2 2 0 0 0 0-4z" fill="white" opacity=".4"/></svg>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header fade-in">
+    <button class="back-btn" onclick="history.back()">‹</button>
+    <div>
+      <h2 style="font-size:20px;font-weight:800;">My Profile</h2>
+      <p style="font-size:11px;color:var(--text-3);margin-top:2px;">Eco Warrior · Level 4</p>
+    </div>
+  </div>
+
+  <!-- Scrollable Content -->
+  <div class="scroll-area">
+
+    <!-- Avatar Hero -->
+    <div class="hero-card fade-in-2" style="text-align:center;margin-bottom:12px;">
+      <div class="avatar-lg" style="position:relative;">
+        JD
+        <span style="position:absolute;bottom:4px;right:4px;width:16px;height:16px;border-radius:50%;background:var(--green-bright);border:2px solid var(--surface);display:block;"></span>
+      </div>
+      <h2 style="font-size:20px;font-weight:900;">Juan Dela Cruz</h2>
+      <p style="color:var(--text-3);font-size:13px;margin-top:4px;">juan.delacruz@email.com</p>
+      <div style="margin-top:10px;">
+        <span class="badge-open" style="background:rgba(255,204,0,.15);color:var(--yellow);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:700;">⭐ Eco Warrior · Level 4</span>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div style="display:flex;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;" class="fade-in-2">
+      <div class="stat-cell">
+        <p style="color:var(--accent);font-weight:900;font-size:18px;">2,840</p>
+        <small style="color:var(--text-3);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Credits</small>
+      </div>
+      <div class="stat-cell">
+        <p style="color:var(--green-bright);font-weight:900;font-size:18px;">142 kg</p>
+        <small style="color:var(--text-3);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Recycled</small>
+      </div>
+      <div class="stat-cell" style="border:none;">
+        <p style="color:var(--yellow);font-weight:900;font-size:18px;">300</p>
+        <small style="color:var(--text-3);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;">Donated</small>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <p class="section-label fade-in-3">Achievements</p>
+    <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;-ms-overflow-style:none;scrollbar-width:none;" class="fade-in-3">
+      <div class="card badge-card">🌱<small style="font-size:11px;font-weight:700;">Eco Starter</small></div>
+      <div class="card badge-card">♻️<small style="font-size:11px;font-weight:700;">Recycler</small></div>
+      <div class="card badge-card">💧<small style="font-size:11px;font-weight:700;">Hydrator</small></div>
+      <div class="card badge-card">❤️<small style="font-size:11px;font-weight:700;">Donor</small></div>
+      <div class="card badge-card" style="opacity:.4;">🏆<small style="font-size:11px;font-weight:700;">Champion</small></div>
+      <div class="card badge-card" style="opacity:.4;">🌍<small style="font-size:11px;font-weight:700;">Earth Hero</small></div>
+    </div>
+
+    <!-- Eco Activity -->
+    <p class="section-label fade-in-3">Eco Activity</p>
+    <div class="card fade-in-3">
+      <div class="menu-row" style="padding:12px 0;">
+        <div class="icon-wrap green">♻️</div>
+        <span style="flex:1;">Total Recycled</span>
+        <span style="color:var(--green-bright);font-weight:800;">142 kg</span>
+      </div>
+      <div class="menu-row" style="padding:12px 0;">
+        <div class="icon-wrap blue">💧</div>
+        <span style="flex:1;">Water Collected</span>
+        <span style="color:var(--accent);font-weight:800;">28.4 L</span>
+      </div>
+      <div class="menu-row" style="padding:12px 0;border-bottom:none;">
+        <div class="icon-wrap red">❤️</div>
+        <span style="flex:1;">Points Donated</span>
+        <span style="color:var(--red);font-weight:800;">300 pts</span>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <p class="section-label fade-in-3">Settings</p>
+    <div class="card fade-in-3">
+      <div class="menu-row">
+        🔔 Notifications
+        <span class="chip" style="background:var(--accent);color:#000;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:900;margin-left:auto;">3</span>
+      </div>
+      <div class="menu-row">⚙️ Settings</div>
+      <div class="menu-row">🔒 Privacy &amp; Security</div>
+    </div>
+    <div class="card fade-in-3">
+      <div class="menu-row" style="color:var(--red);border-bottom:none;" onclick="location.href='index.html'">🚪 Log Out</div>
+    </div>
+
+  </div><!-- /scroll-area -->
+
+  <!-- Bottom Nav -->
+  <nav class="nav-bar">
+    <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></a>
+    <a href="wallet.html" class="nav-item"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>Wallet</span></a>
+    <a href="locations.html" class="nav-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Locations</span></a>
+    <a href="profile.html" class="nav-item active"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Profile</span></a>
+  </nav>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
